@@ -5,7 +5,17 @@ Simple step by step process for creating an initial DB, Collection and an Admin 
 After installing <b>MongoDB</b> access the mongo shell and execute:
 ```bash
 use admin
-db.createUser({ user: "testUser" , pwd: "strongPassword", roles: ["userAdminAnyDatabase", "dbAdminAnyDatabase", "readWriteAnyDatabase"]})
+db.createUser(
+   {
+      user: "testUser",
+      pwd: "strongPassword",
+      roles: [
+         "userAdminAnyDatabase",
+         "dbAdminAnyDatabase",
+         "readWriteAnyDatabase"
+      ]
+   }
+)
 ```
 This will create a new user called <b>testUser</b> with Admin priviliges.
 ## Create a new DB
